@@ -42,7 +42,6 @@ mkdir -p "$DOWNLOADS_DIR"
 GCC_SRC_TARBALL_FILENAME="gcc-$GCC_VERSION.tar.xz"
 GCC_SRC_TARBALL_SIG_FILENAME="gcc-$GCC_VERSION.tar.xz.sig"
 
-# FIXME: get core count in a amd64 or arm64-friendly-way
 CORE_COUNT="$(lscpu | awk '
   /^Core\(s\) per socket:/{cores_per_socket=$4}
   /^Socket\(s\):/{sockets=$2}
